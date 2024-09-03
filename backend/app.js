@@ -15,8 +15,8 @@ const app = express();
 //db connection
 sequelize
   .authenticate()
-  .then(() => console.log("Connected to MySQL"))
-  .catch((err) => console.error("Error connecting to MySQL:", err));
+  .then(() => console.log("Connected to DB"))
+  .catch((err) => console.error("Error connecting to DB:", err));
 
 
 // import ur model in starter point of ur app sync models with the database
