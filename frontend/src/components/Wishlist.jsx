@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Wishlist = () => {
   const { wishlistItems } = useSelector((state) => state.wishlist);
   return (
-    <section className="container mx-auto py-10 min-h-[calc(600px-2.1rem)]">
+    <section className="px-default md:px-primary w-full py-10 min-h-[calc(600px-2.1rem)]">
       {wishlistItems.length === 0 ? (
         <motion.h1
           className=" text-center text-secondary text-[2rem]"

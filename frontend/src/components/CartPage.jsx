@@ -46,7 +46,7 @@ const CartPage = () => {
       transition={{ duration: 0.8 }}
       className="min-h-screen flex items-center justify-center"
     >
-      <div className="container mx-auto px-4">
+      <div className="px-default md:px-primary w-full">
         <div className="flex flex-col">
           <h2 className="text-[2rem] font-bold text-center mb-5">Cart</h2>
           <div className="flex flex-col mt-4">
@@ -96,7 +96,12 @@ const CartPage = () => {
                                 className="w-16 h-16 object-cover rounded-full  "
                               />
                               <p className="ml-4 text-center font-semibold">
-                                {item.name}
+                                {
+                                  item.name.length > 20
+                                    ? item.name.substring(0, 20) + "..."
+                                    : item.name
+
+                                }
                               </p>
                             </div>
                           </td>

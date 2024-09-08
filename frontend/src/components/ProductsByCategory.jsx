@@ -25,7 +25,7 @@ const ProductsByCategory = () => {
   }
   return (
     <motion.div
-      className="min-h-[600px] container mx-auto md:px-10 py-32"
+      className="min-h-[600px] px-default md:px-primary w-full py-32"
       initial={{ opacity: 0, translateX: -1000 }}
       animate={{ opacity: 1, translateX: 0 }}
       transition={{ duration: 1 }}

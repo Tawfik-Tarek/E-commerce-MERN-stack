@@ -1,10 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const AdminPage = () => {
   return (
-    <div className="bg-main py-32 px-5 md:px-10 text-white min-h-[600px]">
+    <div className="bg-main py-32 px-default md:px-primary text-white min-h-[600px]">
       <h1 className="text-center mb-5 text-[2rem] font-semibold">Admin Page</h1>
       <div className="flex flex-wrap justify-center gap-y-5 md:gap-y-0 gap-x-10 items-center">
         <Link

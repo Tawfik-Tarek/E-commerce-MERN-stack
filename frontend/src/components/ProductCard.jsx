@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-
 const ProductCard = ({ liked: isLiked, product }) => {
   const ref = useRef(null);
   const dispatch = useDispatch();
@@ -107,7 +106,9 @@ const ProductCard = ({ liked: isLiked, product }) => {
       </div>
       <div className="bg-gray-100">
         <h1 className="text-[#333333] text-[1rem] font-semibold my-3">
-          {product.name.slice(0 , 20) + "..."}
+          {product.name.length > 20
+            ? product.name.substring(0, 20) + "..."
+            : product.name}
         </h1>
         <div className="flex items-center">
           <p className="text-secondary text-[1rem]">${priceAfterDisc}</p>
