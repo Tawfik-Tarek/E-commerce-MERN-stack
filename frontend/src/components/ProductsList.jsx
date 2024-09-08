@@ -20,7 +20,7 @@ const ProductsList = () => {
   }
 
   return (
-    <div className="flex flex-wrap justify-center md:justify-start gap-y-5 md:gap-y-0 gap-x-10 items-center">
+    <div className="flex flex-wrap justify-center  md:justify-start gap-y-5 md:gap-y-0 gap-x-10 items-center">
       {products.map((product) => {
         let liked = false;
         if (wishlistItems) {

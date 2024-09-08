@@ -9,6 +9,9 @@ export default {
       colors:{
         'secondary': '#DB4444',
         main: "#11113A",
+      } , 
+      padding:{
+        "primary" : "20rem",
       }
     },
   },

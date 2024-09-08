@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useRef } from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../rtk/slices/cartSlice";
@@ -34,7 +33,7 @@ const ProductCard = ({ liked: isLiked, product }) => {
 
   return (
     <motion.div
-      className="w-[270px] h-[350px] justify-self-center"
+      className="w-[270px] h-[350px] "
       initial={{ translateX: -1000 }}
       animate={{ translateX: 0 }}
       transition={{ duration: 1 }}
@@ -46,16 +45,16 @@ const ProductCard = ({ liked: isLiked, product }) => {
       >
         <img
           src={`${API_URL}/uploads/${product.image_url}`}
-          className="p-10"
+          className="p-5 object-contain h-[250px] w-full"
           alt="Product"
+          width={250}
+          height={250}
         />
-        {
-          product.discount > 0 && (
-            <div className="absolute top-0 left-0 bg-secondary text-white p-1 rounded-br-lg">
-              {dis}% OFF
-            </div>
-          )
-        }
+        {product.discount > 0 && (
+          <div className="absolute top-0 left-0 bg-secondary text-white p-1 rounded-br-lg">
+            {dis}% OFF
+          </div>
+        )}
         <div className="absolute top-4 right-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,9 +65,7 @@ const ProductCard = ({ liked: isLiked, product }) => {
             className={`w-[2rem] h-[2rem] mb-2 bg-white p-1 rounded-full cursor-pointer transition-all duration-300 delay-50 ease-in-out ${
               isLiked ? " text-red-500 fill-red-500" : ""
             }`}
-            onClick={() => {
-              handleWishlist();
-            }}
+            onClick={handleWishlist}
           >
             <path
               strokeLinecap="round"
@@ -108,19 +105,17 @@ const ProductCard = ({ liked: isLiked, product }) => {
           Add To Cart
         </button>
       </div>
-      <div className="bg-white">
+      <div className="bg-gray-100">
         <h1 className="text-[#333333] text-[1rem] font-semibold my-3">
-          {product.name}
+          {product.name.slice(0 , 20) + "..."}
         </h1>
         <div className="flex items-center">
           <p className="text-secondary text-[1rem]">${priceAfterDisc}</p>
-          {
-            product.discount > 0 && (
-              <p className="text-gray-400 text-[1rem] line-through mx-2">
-                ${product.price}
-              </p>
-            )
-          }
+          {product.discount > 0 && (
+            <p className="text-gray-400 text-[1rem] line-through mx-2">
+              ${product.price}
+            </p>
+          )}
         </div>
       </div>
     </motion.div>

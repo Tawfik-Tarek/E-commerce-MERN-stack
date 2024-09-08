@@ -1,6 +1,5 @@
 import React from "react";
 import SectionTag from "./SectionTag";
-import Timer from "./Timer";
 import ProductsList from "./ProductsList";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
