@@ -1,6 +1,8 @@
 const User = require("../models/User");
 const { Op } = require("sequelize");
 const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
+
 
 const login = async (req, res) => {
   const { usernameOrEmail, password } = req.body;
@@ -14,7 +16,8 @@ const login = async (req, res) => {
       return res.status(404).json({ message: "Invalid username or password" });
     }
 
-    const isMatch = (password == user.password)
+    const isMatch = await bcrypt.compare(password, user.password);
+
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid username or password" });
     }
@@ -27,7 +30,7 @@ const login = async (req, res) => {
       maxAge: 3 * 24 * 60 * 60 * 1000,
     });
     let userInfo = {};
-    if (user.id == 2) {
+    if (user.isAdmin) {
       userInfo = {
         username: user.username,
         email: user.email,
@@ -50,9 +53,10 @@ const login = async (req, res) => {
 };
 
 const signup = async (req, res) => {
-  let { username, email, password } = req.body;
+  const { username, email, password } = req.body;
   try {
-    const user = await User.create({ username, email, password });
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = await User.create({ username, email, password: hashedPassword });
     res.status(201).json({ message: "Signup successful" });
   } catch (error) {
     console.error("Signup error:", error);

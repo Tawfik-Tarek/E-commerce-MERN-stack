@@ -8,8 +8,10 @@ const {
   deleteUser,
 } = require("../controllers/userController");
 
+
 const isAuthorized = require("../middlewares/isAuthorized");
 const isAdmin = require("../middlewares/isAdmin");
+const canDelete = require("../middlewares/canDelete");
 
 router
   .route("/")
@@ -19,6 +21,6 @@ router
   .route("/:id")
   .get(isAuthorized , getUserById)
   .put(isAuthorized , updateUser)
-  .delete(isAuthorized, isAdmin, deleteUser);
+  .delete(isAuthorized, canDelete, deleteUser);
 
 module.exports = router;
