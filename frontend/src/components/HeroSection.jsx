@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section className="flex flex-col md:flex-row justify-between items-center relative gap-5 w-full">
       <aside className="flex-none border-r md:border-black pr-4 md:pr-6 px-4  w-full md:w-1/4">
-        <ul className="flex flex-col items-start space-y-2 md:space-y-3 py-4 md:py-8">
+        <ul className="flex md:flex-col justify-center items-center md:justify-start gap-[15px] md:gap-0 flex-wrap md:flex-nowrap md:items-start md:space-y-3 py-4 md:py-8">
           <li>Woman’s Fashion</li>
           <li>Men’s Fashion</li>
           <li>Electronics</li>
