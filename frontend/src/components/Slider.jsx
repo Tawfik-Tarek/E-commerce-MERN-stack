@@ -31,12 +31,12 @@ const Slider = () => {
     setCurrent(current === 0 ? slides.length - 1 : current - 1);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent(current === slides.length - 1 ? 0 : current + 1);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [current, slides]);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrent(current === slides.length - 1 ? 0 : current + 1);
+//     }, 5000);
+//     return () => clearInterval(interval);
+//   }, [current, slides]);
 
   return (
     <div className="relative w-full max-w-full overflow-hidden">
@@ -51,7 +51,7 @@ const Slider = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
                   transition={{ duration: 0.5 }}
-                  className="flex items-center justify-between px-4 md:px-12 text-white"
+                  className="flex items-center w-full justify-evenly h-full  md:justify-between px-4 md:px-12 text-white"
                 >
                   <div className="p-4 md:p-8">
                     <div className="flex items-center justify-start gap-2 mb-3 md:mb-5">
@@ -71,13 +71,12 @@ const Slider = () => {
                       <FaArrowRight size={16} />
                     </Link>
                   </div>
-                  <div className="hidden md:block">
+                  <div className="">
                     <img
                       src={slide.image}
-                      className="object-cover w-[31rem] h-[22rem]"
+                      className="object-contain w-[15rem] h-[22rem]  lg:w-[31rem] lg:h-[22rem]"
                       alt="hero"
                       loading="lazy"
-                      
                     />
                   </div>
                 </motion.div>

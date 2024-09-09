@@ -11,7 +11,7 @@ export default {
         main: "#11113A",
       } , 
       padding:{
-        "primary" : "2rem",
+        "primary" : "5rem",
         "default" : "1rem"
       }
     },

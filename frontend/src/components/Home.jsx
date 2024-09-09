@@ -5,7 +5,7 @@ import HeroSection from "./HeroSection";
 
 const Home = () => {
   return (
-    <div className="container px-4 md:px-8 mx-auto min-h-screen">
+    <div className="container px-default md:px-primary mx-auto min-h-screen">
       <HeroSection />
       <TodayDes />
       <CategoriesSection />
