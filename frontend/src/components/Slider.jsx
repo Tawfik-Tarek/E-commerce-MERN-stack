@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import apple from "../../public/images/apple.png";
-import hero from "../../public/images/hero.png";
+import iphone from "../../public/images/hero.png";
+import samsung from "../../public/images/samsung.png";
+import samsungLogo from "../../public/images/samsung_logo.png";
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -11,15 +14,17 @@ const Slider = () => {
   const slides = [
     {
       id: 1,
-      image: hero,
+      image: iphone,
       title: "Apple Products",
       description: "Up to 10% off Voucher",
+      logo : apple
     },
     {
       id: 2,
-      image: hero,
-      title: "Hero Products",
+      image: samsung,
+      title: "Samsung Products",
       description: "Get the best deals",
+      logo : samsungLogo
     },
   ];
 
@@ -55,7 +60,7 @@ const Slider = () => {
                 >
                   <div className="p-4 md:p-8">
                     <div className="flex items-center justify-start gap-2 mb-3 md:mb-5">
-                      <img src={apple} alt="apple" className="w-10 h-auto" />
+                      <img src={slide.logo} alt="apple" className="w-10 h-10"  width={200} height={200} />
                       <h1 className="text-base md:text-lg font-semibold">
                         {slide.title}
                       </h1>
@@ -76,7 +81,8 @@ const Slider = () => {
                       src={slide.image}
                       className="object-contain w-[15rem] h-[22rem]  lg:w-[31rem] lg:h-[22rem]"
                       alt="hero"
-                      loading="lazy"
+                      width = "100%"
+                      height = "100%"
                     />
                   </div>
                 </motion.div>
