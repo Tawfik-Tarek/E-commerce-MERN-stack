@@ -5,7 +5,7 @@ import Logo from "./Logo";
 
 const Header = () => {
   return (
-    <header className=" px-default md:px-primary py-6 border-b-2 border-solid w-full  h-[70px]  bg-white ">
+    <header className="container mx-auto mb-10 px-default md:px-primary py-6  border-solid border-b-[0.5px] border-b-black w-full  h-[70px] ">
       <div className="flex items-center justify-between">
         <Logo />
         <Navbar />

@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors:{
-        'secondary': '#DB4444',
+        'secondary': '#9A3131',
         main: "#11113A",
       } , 
       padding:{
-        "primary" : "6rem",
+        "primary" : "2rem",
         "default" : "1rem"
       }
     },

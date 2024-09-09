@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 import { removeAllFromWishlist } from "../rtk/slices/wishlistSlice";
 import { removeAllFromCart } from "../rtk/slices/cartSlice";
 import { useState } from "react";
-import {FaBars} from "react-icons/fa"
 
 
 const Navbar = () => {

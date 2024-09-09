@@ -33,7 +33,7 @@ const CategoriesSection = () => {
           {categories?.map((category) => (
             <Link to={`/category/${category.id}`} key={category.id} className="w-fit">
               <div className="rounded-lg text-center transition-all duration-300 ease-in hover:bg-secondary w-[11rem] h-[9rem] p-[1rem] hover:text-white shadow-lg  border-[1px] border-solid border-secondary">
-                <img src={`${API_URL}/uploads/categories/${category.imageUrl}`} alt={category.name} className="w-16 h-16 mx-auto mb-4" />
+                <img src={`${API_URL}/uploads/categories/${category.imageUrl}`} alt={category.name || "category image"} className="w-16 h-16 mx-auto mb-4" loading="lazy" />
                 <h3 className="text-[1.5rem] font-semibold">{category.name}</h3>
               </div>
             </Link>
