@@ -61,3 +61,6 @@ a {
   }
 }
 
+.jbl-img{
+  filter: drop-shadow(0 3px 104px rgb(136, 136, 136));
+}

@@ -29,7 +29,7 @@ const CategoriesSection = () => {
             Browse By Category
           </h2>
         </div>
-        <div className="flex justify-center md:justify-start gap-x-5 items-center flex-wrap">
+        <div className="flex justify-center md:justify-start gap-5 items-center flex-wrap">
           {categories?.map((category) => (
             <Link to={`/category/${category.id}`} key={category.id} className="w-fit">
               <div className="rounded-lg text-center transition-all duration-300 ease-in hover:bg-secondary w-[11rem] h-[9rem] p-[1rem] hover:text-white shadow-lg  border-[1px] border-solid border-secondary">
