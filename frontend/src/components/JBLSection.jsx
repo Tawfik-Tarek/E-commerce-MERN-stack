@@ -24,6 +24,7 @@ const JBLSection = () => {
             className=" h-[20.625rem] w-[35.5rem] object-contain"
             width={200}
             height={200}
+            loading="lazy"
           />
         </div>
       </div>
