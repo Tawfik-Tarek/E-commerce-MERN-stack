@@ -36,12 +36,12 @@ const Slider = () => {
     setCurrent(current === 0 ? slides.length - 1 : current - 1);
   };
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrent(current === slides.length - 1 ? 0 : current + 1);
-//     }, 5000);
-//     return () => clearInterval(interval);
-//   }, [current, slides]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent(current === slides.length - 1 ? 0 : current + 1);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [current, slides]);
 
   return (
     <div className="relative w-full max-w-full overflow-hidden">
@@ -104,6 +104,29 @@ const Slider = () => {
             &#10095;
           </span>
         </div>
+        <AnimatePresence
+          initial={false}
+          custom={current}
+          mode="wait"
+          onExitComplete={() => null}
+        >
+          <motion.div className="absolute bottom-[0.688rem] left-0 right-0 flex justify-center gap-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {slides.map((slide, index) => (
+              <span
+                key={index}
+                onClick={() => setCurrent(index)}
+                className={`w-2 h-2 rounded-full bg-white cursor-pointer ${
+                  index === current && "bg-[#DB4444]"
+                }`}
+              ></span>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
