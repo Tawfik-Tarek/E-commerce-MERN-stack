@@ -3,7 +3,6 @@ const { Op } = require("sequelize");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
-
 const login = async (req, res) => {
   const { usernameOrEmail, password } = req.body;
   try {
@@ -25,10 +24,14 @@ const login = async (req, res) => {
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
       expiresIn: "3d",
     });
+
     res.cookie("jwt", token, {
       httpOnly: true,
+      sameSite: "lax", 
+      secure: process.env.NODE_ENV === "production", 
       maxAge: 3 * 24 * 60 * 60 * 1000,
     });
+
     let userInfo = {};
     if (user.isAdmin) {
       userInfo = {
@@ -56,7 +59,11 @@ const signup = async (req, res) => {
   const { username, email, password } = req.body;
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = await User.create({ username, email, password: hashedPassword });
+    const user = await User.create({
+      username,
+      email,
+      password: hashedPassword,
+    });
     res.status(201).json({ message: "Signup successful" });
   } catch (error) {
     console.error("Signup error:", error);
