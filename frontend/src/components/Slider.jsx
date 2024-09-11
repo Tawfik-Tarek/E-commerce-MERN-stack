@@ -111,14 +111,16 @@ const Slider = () => {
             transition={{ duration: 0.5 }}
           >
             {slides.map((slide, index) => (
-              <span
-                key={index}
-                onClick={() => setCurrent(index)}
-                className={`w-2 h-2 rounded-full bg-white cursor-pointer ${
-                  index === current && "bg-red-500"
+              <motion.div
+                key={slide.id}
+                className={`w-2 h-2 rounded-full cursor-pointer ${
+                  index === current ? "bg-red-500" : "bg-gray-500"
                 }`}
-              ></span>
+                onClick={() => setCurrent(index)}
+              ></motion.div>
             ))}
+
+
           </motion.div>
         </AnimatePresence>
       </div>
