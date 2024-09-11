@@ -35,7 +35,7 @@ const NewArrivalSection = () => {
             </Link>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[2rem] gap-x-[1.875rem]">
           <div className="col-span-2 bg-black h-auto md:h-[17.5rem] rounded-[0.25rem] relative overflow-hidden flex flex-col items-center md:pl-[8.625rem]">
             <div className="absolute left-[2rem] bottom-[2rem] w-[15.125rem] h-[7rem] text-white flex flex-col gap-[1rem]">
@@ -52,7 +52,7 @@ const NewArrivalSection = () => {
             <img
               src={woman_img}
               alt="Women's Collections"
-              className="w-[15rem] h-[10rem] md:w-[20rem] md:h-[15rem] xl:w-[27rem] xl:h-[17.875rem]"
+              className="w-[15rem] h-full "
             />
           </div>
 
@@ -60,7 +60,7 @@ const NewArrivalSection = () => {
             <img
               src={speaker_img}
               alt="Speakers"
-              className="w-[11rem] h-[12rem] md:w-[11.875rem] md:h-[13.813rem]"
+              className="w-[11rem] h-[12rem] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0  md:static  md:w-[11.875rem] md:h-[13.813rem]"
             />
             <div className="absolute left-[1.5rem] bottom-[1.5rem] w-[11.938rem] h-[5.313rem] text-white flex flex-col gap-[0.5rem]">
               <h1 className="text-[1.25rem] md:text-[1.5rem] font-semibold">
@@ -79,7 +79,7 @@ const NewArrivalSection = () => {
             <img
               src={perfume_img}
               alt="Perfumes"
-              className="w-[10rem] h-[10rem] md:w-[12.563rem] md:h-[12.688rem]"
+              className="w-[10rem] h-[10rem] md:w-[12.563rem] md:h-[12.688rem] relative left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0  md:static"
             />
             <div className="absolute left-[1.5rem] bottom-[1.5rem] w-[11.938rem] h-[5.313rem] text-white flex flex-col gap-[0.5rem]">
               <h1 className="text-[1.25rem] md:text-[1.5rem] font-semibold">
