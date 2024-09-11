@@ -40,8 +40,8 @@ const Rating = require("./models/Rating");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 const allowedOrigins = [
-  "https://e-commerce-mern-stack-topaz.vercel.app",
-  "https://another-allowed-origin.com",
+  "https://e-commerce-mern-stack-3orfb1353-tawfiktareks-projects-ad6fcbbe.vercel.app",
+  "localhost:3000",
 ];
 
 app.use(
