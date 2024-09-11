@@ -17,7 +17,7 @@ const categories = [
 const HeroSection = () => {
   return (
     <section className="flex flex-col md:flex-row justify-between items-center relative gap-5 w-full">
-      <aside className="flex-none border-r md:border-black pr-4 md:pr-6 px-4 w-full md:w-1/4">
+      <aside className="flex-none border-r md:border-black pr-4 md:pr-6 px-4 w-full md:w-1/5">
         <ul className="flex md:flex-col justify-center items-center md:justify-start gap-[15px] md:gap-0 flex-wrap md:flex-nowrap md:items-start md:space-y-3 py-4 md:py-8">
           {categories.map((category, index) => (
             <li key={index}>
