@@ -32,6 +32,9 @@ const login = async (req, res) => {
       maxAge: 3 * 24 * 60 * 60 * 1000,
     });
 
+    console.log("User:", user , "Token:", token);
+    
+
     let userInfo = {};
     if (user.isAdmin) {
       userInfo = {
