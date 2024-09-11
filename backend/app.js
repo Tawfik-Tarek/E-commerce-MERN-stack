@@ -41,7 +41,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 const allowedOrigins = [
   "https://e-commerce-mern-stack-topaz.vercel.app",
-  "localhost:3000",
+  "http://localhost:3000",
 ];
 
 app.use(

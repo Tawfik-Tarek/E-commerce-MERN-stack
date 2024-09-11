@@ -115,7 +115,7 @@ const Slider = () => {
                 key={index}
                 onClick={() => setCurrent(index)}
                 className={`w-2 h-2 rounded-full bg-white cursor-pointer ${
-                  index === current && "bg-[#DB4444]"
+                  index === current && "bg-red-500"
                 }`}
               ></span>
             ))}
