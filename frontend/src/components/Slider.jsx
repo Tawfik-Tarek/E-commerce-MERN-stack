@@ -36,12 +36,6 @@ const Slider = () => {
     setCurrent(current === 0 ? slides.length - 1 : current - 1);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent(current === slides.length - 1 ? 0 : current + 1);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [current, slides]);
 
   return (
     <div className="relative w-full max-w-full overflow-hidden">
@@ -60,7 +54,7 @@ const Slider = () => {
                 >
                   <div className="p-4 md:p-8">
                     <div className="flex items-center justify-start gap-2 mb-3 md:mb-5">
-                      <img src={slide.logo} alt="apple" className="w-10 h-10"  width={200} height={200} />
+                      <img src={slide.logo} alt="apple" className="w-10 h-10 select-none"  width={200} height={200} />
                       <h1 className="text-base md:text-lg font-semibold">
                         {slide.title}
                       </h1>
@@ -79,7 +73,7 @@ const Slider = () => {
                   <div className="">
                     <img
                       src={slide.image}
-                      className="object-contain w-[15rem] h-[22rem]  lg:w-[31rem] lg:h-[22rem]"
+                      className="object-contain w-[15rem] h-[22rem]  lg:w-[31rem] lg:h-[22rem] select-none"
                       alt="hero"
                       width = "100%"
                       height = "100%"

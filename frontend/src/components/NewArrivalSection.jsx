@@ -21,7 +21,7 @@ const NewArrivalSection = () => {
           <img
             src={ps_img}
             alt="PlayStation 5"
-            className="w-[20rem] h-[20rem] md:w-[25rem] md:h-[25rem] xl:w-[31.938rem] xl:h-[31.938rem]"
+            className="w-[20rem] h-[20rem] md:w-[25rem] md:h-[25rem] xl:w-[31.938rem] xl:h-[31.938rem] select-none"
           />
           <div className="absolute left-[2rem] bottom-[2rem] w-[15.125rem] h-[7rem] text-white flex flex-col gap-[1rem]">
             <h1 className="text-[1.25rem] md:text-[1.5rem] font-semibold">
@@ -52,7 +52,7 @@ const NewArrivalSection = () => {
             <img
               src={woman_img}
               alt="Women's Collections"
-              className="w-[15rem] h-full "
+              className="w-[15rem] h-full select-none "
             />
           </div>
 
@@ -60,7 +60,7 @@ const NewArrivalSection = () => {
             <img
               src={speaker_img}
               alt="Speakers"
-              className="w-[11rem] h-[12rem] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0  md:static  md:w-[11.875rem] md:h-[13.813rem]"
+              className="w-[11rem] h-[12rem] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0  md:static  md:w-[11.875rem] md:h-[13.813rem] select-none"
             />
             <div className="absolute left-[1.5rem] bottom-[1.5rem] w-[11.938rem] h-[5.313rem] text-white flex flex-col gap-[0.5rem]">
               <h1 className="text-[1.25rem] md:text-[1.5rem] font-semibold">
@@ -79,7 +79,7 @@ const NewArrivalSection = () => {
             <img
               src={perfume_img}
               alt="Perfumes"
-              className="w-[10rem] h-[10rem] md:w-[12.563rem] md:h-[12.688rem] relative left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0  md:static"
+              className="w-[10rem] h-[10rem] md:w-[12.563rem] md:h-[12.688rem] relative left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] md:translate-x-0 md:translate-y-0  md:static select-none"
             />
             <div className="absolute left-[1.5rem] bottom-[1.5rem] w-[11.938rem] h-[5.313rem] text-white flex flex-col gap-[0.5rem]">
               <h1 className="text-[1.25rem] md:text-[1.5rem] font-semibold">
