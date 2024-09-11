@@ -39,12 +39,26 @@ const Rating = require("./models/Rating");
 //middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
+const allowedOrigins = [
+  "https://e-commerce-mern-stack-topaz.vercel.app",
+  "https://another-allowed-origin.com",
+];
+
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://e-commerce-mern-stack-topaz.vercel.app"],
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
+
 app.use(cookieParser());
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
