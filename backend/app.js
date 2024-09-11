@@ -47,6 +47,7 @@ app.use(
       "http://localhost:3000", // For local development
     ],
     credentials: true, // Allow cookies to be sent
+    withCredentials: true, // Allow credentials to be sent
   })
 );
 
