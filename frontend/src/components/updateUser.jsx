@@ -27,7 +27,6 @@ const UpdateUser = () => {
     try {
       const updatedUser = { name: username, password };
       const res = await update({ id, user: updatedUser }).unwrap();
-      console.log(res);
       toast.success("User Updated Successfully");
     } catch (error) {
       console.log(error);

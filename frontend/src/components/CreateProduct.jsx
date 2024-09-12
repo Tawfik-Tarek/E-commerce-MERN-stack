@@ -45,7 +45,6 @@ const CreateProduct = () => {
     formData.append("image", image);
     if (!image) {
       toast.error("Please select an image.");
-      console.log("formdata", formData);  
       return;
     }
     if (parsedDisscount > parsedPrice) {

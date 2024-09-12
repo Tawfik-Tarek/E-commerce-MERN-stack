@@ -32,8 +32,6 @@ const login = async (req, res) => {
       maxAge: 3 * 24 * 60 * 60 * 1000,
     });
 
-    console.log("Set-Cookie header:", res.getHeaders()["set-cookie"]);
-
     let userInfo = {};
     if (user.isAdmin) {
       userInfo = {

@@ -28,7 +28,6 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await login({ usernameOrEmail , password }).unwrap();
-      console.log(res);
       toast.success(res.message)
       dispatch(setCredentials(res.user))
     } catch (error) {

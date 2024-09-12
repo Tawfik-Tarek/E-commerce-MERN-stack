@@ -117,16 +117,7 @@ const updateProduct = async (req, res) => {
         imageUrl,
         sold,
       } = req.body.updatedValues;
-      console.log({
-        name,
-        description,
-        price,
-        countInStock,
-        disscount,
-        categoryId,
-        imageUrl,
-        sold,
-      });
+
       product.name = name ?? product.name;
       product.description = description ?? product.description;
       product.price = price ?? product.price;

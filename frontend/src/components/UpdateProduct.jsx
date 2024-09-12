@@ -157,7 +157,6 @@ const UpdateProduct = () => {
                 value={category}
                 onChange={(e) => {
                   setCategory(e.target.value);
-                  console.log(category);
                 }}
               >
                 <option value="">Select Category</option>
