@@ -1,31 +1,33 @@
-import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import React, { Suspense, lazy } from "react";
+import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // Import components that should be loaded immediately
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 // Lazy load other components
-const Login = lazy(() => import('./components/Login'));
-const Register = lazy(() => import('./components/Register'));
-const AdminRoute = lazy(() => import('./components/AdminRoute'));
-const PrivateRoute = lazy(() => import('./components/PrivateRoute'));
-const CreateProduct = lazy(() => import('./components/CreateProduct'));
-const CreateCategory = lazy(() => import('./components/CreateCategory'));
-const UpdateProduct = lazy(() => import('./components/UpdateProduct'));
-const ManageProducts = lazy(() => import('./components/ManageProducts'));
-const ManageUsers = lazy(() => import('./components/ManageUsers'));
-const UpdateUser = lazy(() => import('./components/updateUser'));
-const Wishlist = lazy(() => import('./components/Wishlist'));
-const ErrorPage = lazy(() => import('./components/ErrorPage'));
-const ProductsByCategory = lazy(() => import('./components/ProductsByCategory'));
-const CartPage = lazy(() => import('./components/CartPage'));
-const ProductsPage = lazy(() => import('./components/ProductsPage'));
-const ProductPage = lazy(() => import('./components/ProductPage'));
-const AdminPage = lazy(() => import('./components/AdminPage'));
+const Login = lazy(() => import("./pages/Login"));
+const Register = lazy(() => import("./pages/Register"));
+const AdminRoute = lazy(() => import("./routes/AdminRoute"));
+const PrivateRoute = lazy(() => import("./routes/PrivateRoute"));
+const CreateProduct = lazy(() => import("./pages/CreateProduct"));
+const CreateCategory = lazy(() => import("./pages/CreateCategory"));
+const UpdateProduct = lazy(() => import("./pages/UpdateProduct"));
+const ManageProducts = lazy(() => import("./pages/ManageProducts"));
+const ManageUsers = lazy(() => import("./pages/ManageUsers"));
+const UpdateUser = lazy(() => import("./pages/updateUser"));
+const Wishlist = lazy(() => import("./pages/Wishlist"));
+const ErrorPage = lazy(() => import("./pages/ErrorPage"));
+const ProductsByCategory = lazy(() =>
+  import("./components/ProductsByCategory")
+);
+const CartPage = lazy(() => import("./pages/CartPage"));
+const ProductsPage = lazy(() => import("./pages/ProductsPage"));
+const ProductPage = lazy(() => import("./components/ProductPage"));
+const AdminPage = lazy(() => import("./pages/AdminPage"));
 
 function App() {
   return (

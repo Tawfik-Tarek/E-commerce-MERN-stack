@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "./ProductCard";
+import ProductCard from "../components/ProductCard";
 import { motion } from "framer-motion";
 import { useGetProductsQuery } from "../rtk/slices/productSlice";
 import { useParams } from "react-router-dom";
