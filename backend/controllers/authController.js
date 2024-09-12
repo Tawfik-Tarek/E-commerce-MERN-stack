@@ -27,13 +27,12 @@ const login = async (req, res) => {
 
     res.cookie("jwt", token, {
       httpOnly: true,
-      sameSite: "None", 
-      secure: process.env.NODE_ENV === "production", 
+      sameSite: "None",
+      secure: process.env.NODE_ENV === "production",
       maxAge: 3 * 24 * 60 * 60 * 1000,
     });
 
     console.log("Set-Cookie header:", res.getHeaders()["set-cookie"]);
-    
 
     let userInfo = {};
     if (user.isAdmin) {
@@ -77,8 +76,8 @@ const signup = async (req, res) => {
 const logout = async (req, res) => {
   res.cookie("jwt", "", {
     httpOnly: true,
-    sameSite: "strict",
-    secure: true,
+    sameSite: "None",
+    secure: process.env.NODE_ENV === "production",
     expires: new Date(0),
   });
   res.status(200).json({ message: "Logout successful" });
