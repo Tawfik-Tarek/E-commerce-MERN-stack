@@ -82,11 +82,9 @@ const Footer = () => {
                 Terms Of Use
               </Link>
             </li>
-            <Link to={"/FAQ"} aria-label="FAQ page">
-              {" "}
-              FAQ
-            </Link>
-            <li></li>
+            <li>
+              <Link to={"/FAQ"} aria-label="FAQ page"></Link>
+            </li>
             <li>
               <Link to={"/contact"} aria-label="Contact page">
                 Contact

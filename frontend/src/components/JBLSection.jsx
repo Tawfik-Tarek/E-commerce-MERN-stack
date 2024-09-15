@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import jbl from "../../public/images/jbl.png";
+import { Link } from "react-router-dom";
 
 const JBLSection = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -10,8 +11,8 @@ const JBLSection = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date(); 
-    targetDate.setDate(targetDate.getDate() + 5); 
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 5);
 
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -28,7 +29,7 @@ const JBLSection = () => {
     };
 
     const timer = setInterval(calculateTimeLeft, 1000);
-    return () => clearInterval(timer); 
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -65,9 +66,13 @@ const JBLSection = () => {
               <span className="block text-sm">Seconds</span>
             </p>
           </div>
-          <button className="text-[#FAFAFA] h-[3.5rem] w-[10.688rem] rounded-[4px] bg-[#00FF66] px-4 py-2 mt-4">
+          <Link
+            to={"/shop"}
+            aria-label="go to shop"
+            className="text-[#1E2329]  h-[3.5rem] w-[10.688rem] rounded-[4px] bg-[#00FF66] px-4 py-2 mt-4 flex justify-center items-center"
+          >
             Shop Now
-          </button>
+          </Link>
         </div>
         <div className=" jbl-img justify-center hidden md:flex items-center">
           <img
