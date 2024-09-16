@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /static/
+Disallow: /scripts/
+Disallow: /styles/
+Disallow: /images/
+Disallow: /fonts/
+Disallow: /vendor/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /node_modules/
