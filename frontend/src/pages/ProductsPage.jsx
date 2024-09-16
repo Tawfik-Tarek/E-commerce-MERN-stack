@@ -12,8 +12,8 @@ const ProductsPage = () => {
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const { data, error, isLoading } = useGetProductsQuery({ pageNumber });
   return (
-    <div className="px-default flex flex-col justify-center items-center md:block md:px-primary w-full py-[80px] mx-auto min-h-[calc(100dvh-70px)]">
-      {isLoading && <p className="min-h-[calc(100dvh-70px)]">Loading...</p>}
+    <div className="px-default flex flex-col justify-center items-center md:block md:px-primary w-full py-[80px] mx-auto min-h-[calc(100dvh-200px)]">
+      {isLoading && <p>Loading...</p>}
       {error && <ErrorPage />}
       {data && data.products && (
         <>
